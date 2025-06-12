@@ -23,7 +23,7 @@ component "lambda" {
   }
 
   providers = {
-    aws     = provider.aws.this
+    aws     = provider.aws.that
     archive = provider.archive.this
     local   = provider.local.this
     random  = provider.random.this
