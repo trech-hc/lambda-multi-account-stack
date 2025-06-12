@@ -38,6 +38,21 @@ provider "aws" "this" {
   }
 }
 
+provider "aws" "that" {
+  config {
+    region = var.region
+
+    assume_role_with_web_identity {
+      role_arn           = var.role_arn_alt
+      web_identity_token = var.identity_token
+    }
+
+    default_tags {
+      tags = var.default_tags
+    }
+  }
+}
+
 provider "random" "this" {}
 provider "archive" "this" {}
 provider "local" "this" {}

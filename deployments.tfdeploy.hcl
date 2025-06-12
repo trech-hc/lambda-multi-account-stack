@@ -16,6 +16,7 @@ deployment "development" {
   inputs = {
     region         = "us-east-1"
     role_arn       = "arn:aws:iam::183631330801:role/stacks_demo_role_1"
+    role_arn_alt   = "arn:aws:iam::183631330801:role/stacks_demo_role_3"
     identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-multi-account-stack" }
   }
@@ -25,6 +26,7 @@ deployment "production" {
   inputs = {
     region         = "us-east-1"
     role_arn       = "arn:aws:iam::183631330801:role/stacks_demo_role_2"
+    role_arn_alt   = "arn:aws:iam::183631330801:role/stacks_demo_role_4"
     identity_token = identity_token.aws.jwt
     default_tags   = { stacks-preview-example = "lambda-multi-account-stack" }
   }
